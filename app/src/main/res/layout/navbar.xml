@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    android:backgroundTint="#D5D6D6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/biHome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_border"
+            android:contentDescription="@string/title_home"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/home" />
+
+
+        <ImageButton
+            android:id="@+id/biList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_border"
+            android:contentDescription="@string/title_list"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/list" />
+
+
+        <ImageButton
+            android:id="@+id/biPets"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_border"
+            android:contentDescription="@string/title_pets"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/pets" />
+
+
+        <ImageButton
+            android:id="@+id/biSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_border"
+            android:contentDescription="@string/title_settings"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/settings" />
+
+
+    </LinearLayout>
+</RelativeLayout>
