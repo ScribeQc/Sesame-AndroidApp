@@ -14,20 +14,20 @@ import com.example.sesamefrontend.R;
 import java.util.List;
 
 public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder>{
+    // VARIABLES
     TextView tvInOrOut, tvDate, tvTime;
     ImageView ivPet;
-
     public interface InterfacePetActivity {
         public void clickManager(int position, PetActivity petActivity);
     }
     InterfacePetActivity interfacePetActivity;
     List<PetActivity> listPetActivity;
-
     public AdapterList(List<PetActivity> listPetActivity, InterfacePetActivity interfacePetActivity) {
         this.listPetActivity = listPetActivity;
         this.interfacePetActivity = interfacePetActivity;
     }
 
+    // METHODS
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
