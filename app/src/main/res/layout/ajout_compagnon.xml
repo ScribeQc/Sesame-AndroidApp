@@ -62,7 +62,7 @@
         android:layout_marginHorizontal="65dp"
         android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
         android:layout_marginHorizontal="65dp"
         android:layout_marginTop="30dp"
         app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,46 +131,6 @@
             android:translationY="38dp" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/inputSpecies"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="152dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
-        app:cardElevation="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNickname">
-
-        <EditText
-            android:id="@+id/etSpecies"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/species"
-            android:drawableRight="@drawable/drop_down_menu"
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:fontFamily="@font/poppins"
-            android:hint="Espèce"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textAlignment="gravity"
-            android:textColorHint="@color/black" />
-
-        <View
-            android:id="@+id/dividerSpecies"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginHorizontal="30dp"
-            android:background="@color/lightGray"
-            android:translationY="38dp" />
-    </androidx.cardview.widget.CardView>
-
     <Button
         android:id="@+id/btCreatePet"
         android:layout_width="wrap_content"
@@ -182,6 +142,32 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputSpecies" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="262dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/inputNickname"
+        tools:layout_editor_absoluteX="74dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:buttonTint="@color/black"
+            android:text="Chien" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:text="Chat" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

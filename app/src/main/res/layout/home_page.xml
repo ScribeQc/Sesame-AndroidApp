@@ -31,7 +31,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/rounded_corner"
         android:contentDescription="Open schedule"
-        android:src="@drawable/schedule"
+        android:src="@drawable/ic_add_schedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toStartOf="parent"

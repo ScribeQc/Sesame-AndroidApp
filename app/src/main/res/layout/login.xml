@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -21,15 +22,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019"
+        app:layout_constraintVertical_bias="0.061"
         app:srcCompat="@mipmap/wave_fg_layer" />
 
     <TextView
-        android:id="@+id/tvTitlePetsPlus"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/righteous"
-        android:text="@string/app_name"
+        android:text="Sésame"
         android:textColor="@color/orange"
         android:textColorHighlight="@color/orange"
         android:textColorHint="@color/orange"
@@ -39,25 +40,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
-        android:layout_marginTop="70dp"
+        android:layout_margin="65dp"
         app:cardBackgroundColor="@color/gray"
         app:cardCornerRadius="300dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitlePetsPlus">
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
 
         <EditText
-            android:id="@+id/etFirstName"
+            android:id="@+id/etEmail"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
             android:drawableLeft="@drawable/person_pin_circle"
@@ -71,7 +71,7 @@
             android:textColorHint="@color/black" />
 
         <View
-            android:id="@+id/dividerFirstName"
+            android:id="@+id/dividerEmail"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginHorizontal="30dp"
@@ -81,10 +81,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputMdp"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="65dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         app:cardBackgroundColor="@color/gray"
         app:cardCornerRadius="300dp"
         app:cardElevation="15dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputEmail">
 
         <EditText
-            android:id="@+id/etNickname"
+            android:id="@+id/etMdp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
@@ -109,7 +109,7 @@
             android:textColorHint="@color/black" />
 
         <View
-            android:id="@+id/dividerSpecies"
+            android:id="@+id/dividerMdp"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginHorizontal="30dp"
@@ -121,21 +121,22 @@
         android:id="@+id/tvMdpForgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins"
         android:text="Mot de passe oublié?"
         android:textColor="@color/lightGray"
         android:textColorHint="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputMdp" />
+        app:layout_constraintTop_toBottomOf="@+id/inputMdp"
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <Button
         android:id="@+id/btLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/orange"
         android:fontFamily="@font/poppins"
         android:text="Connexion"
@@ -173,7 +174,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btGoogle">
+        app:layout_constraintTop_toBottomOf="@+id/btGoogle"
+        app:layout_constraintVertical_bias="0.00999999">
 
         <TextView
             android:id="@+id/tvSign"

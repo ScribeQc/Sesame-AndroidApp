@@ -12,13 +12,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.sesamefrontend.classes.AdapterList;
+import com.example.sesamefrontend.classes.AdapterListActivity;
 import com.example.sesamefrontend.classes.PetActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class PetActivityActivity extends AppCompatActivity implements AdapterList.InterfacePetActivity {
+//arnaud
+public class PetActivityActivity extends AppCompatActivity implements AdapterListActivity.InterfacePetActivity {
 
     RecyclerView rvPetActivity;
     public static List<PetActivity> listPetActivity = new ArrayList<>();
@@ -42,7 +42,7 @@ public class PetActivityActivity extends AppCompatActivity implements AdapterLis
         rvPetActivity.setHasFixedSize(true);
         rvPetActivity.setLayoutManager(new LinearLayoutManager(this));
 
-        AdapterList adapterList = new AdapterList(listPetActivity, this);
+        AdapterListActivity adapterList = new AdapterListActivity(listPetActivity, this);
         rvPetActivity.setAdapter(adapterList);
 
         launcher = registerForActivityResult(
