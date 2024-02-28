@@ -40,7 +40,7 @@ public class AdapterListActivity extends RecyclerView.Adapter<AdapterListActivit
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ViewHolder vh = (ViewHolder) holder;
         vh.tvInOrOut.setText(listPetActivity.get(position).isInOrOut() ? "Entrée" : "Sortie");
-        vh.tvInOrOut.setCompoundDrawablesWithIntrinsicBounds(listPetActivity.get(position).isInOrOut() ? R.drawable.input_circle : R.drawable.output_circle, 0, 0, 0);
+        vh.tvInOrOut.setCompoundDrawablesWithIntrinsicBounds(listPetActivity.get(position).isInOrOut() ? R.drawable.drawable_input_circle : R.drawable.drawable_output_circle, 0, 0, 0);
         vh.tvDate.setText(listPetActivity.get(position).getDate());
         vh.tvTime.setText(listPetActivity.get(position).getTime());
         String imgSrc = listPetActivity.get(position).getPet();

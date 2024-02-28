@@ -27,12 +27,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/btn_border"
+            android:background="@drawable/custom_btn_border"
             android:contentDescription="@string/title_home"
             android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/home" />
+            android:src="@drawable/drawable_home" />
 
 
         <ImageButton
@@ -40,12 +40,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/btn_border"
+            android:background="@drawable/custom_btn_border"
             android:contentDescription="@string/title_list"
             android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/list" />
+            android:src="@drawable/drawable_list" />
 
 
         <ImageButton
@@ -53,12 +53,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/btn_border"
+            android:background="@drawable/custom_btn_border"
             android:contentDescription="@string/title_pets"
             android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/pets" />
+            android:src="@drawable/drawable_pets" />
 
 
         <ImageButton
@@ -66,12 +66,12 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/btn_border"
+            android:background="@drawable/custom_btn_border"
             android:contentDescription="@string/title_settings"
             android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/settings" />
+            android:src="@drawable/drawable_settings" />
 
 
     </LinearLayout>

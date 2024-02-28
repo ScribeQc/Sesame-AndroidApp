@@ -1,6 +1,5 @@
 package com.example.sesamefrontend;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -28,7 +27,7 @@ public class ListFragment extends Fragment implements AdapterListActivity.Interf
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_list, container, false);
+        view = inflater.inflate(R.layout.fragment_pet_activity, container, false);
 
         listPetActivity.add(new PetActivity(true, "12h34", "Aujourd'hui", "ic_dog"));
         listPetActivity.add(new PetActivity(false, "17h29", "Hier", "ic_dog"));

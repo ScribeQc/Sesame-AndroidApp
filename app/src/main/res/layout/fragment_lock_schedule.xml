@@ -66,6 +66,6 @@
         app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_add_schedule"
+        app:srcCompat="@drawable/drawable_add_schedule"
         android:contentDescription="AddSchedule" />
 </androidx.constraintlayout.widget.ConstraintLayout>
