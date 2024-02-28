@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -31,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/righteous"
-        android:text="@string/PetPage"
+        android:text="Compagnon"
         android:textColor="@color/orange"
         android:textColorHighlight="@color/orange"
         android:textColorHint="@color/orange"
@@ -39,10 +38,9 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.108" />
 
 
     <TextView
@@ -50,8 +48,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
         android:text="Princess"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,9 +58,7 @@
         android:id="@+id/tvNicknameCompagnon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
+        android:layout_marginTop="30dp"
         android:text="Beuber"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,19 +69,17 @@
         android:id="@+id/ivPetCompagnon"
         android:layout_width="149dp"
         android:layout_height="146dp"
-        android:layout_marginTop="20dp"
-        android:foregroundGravity="center"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNicknameCompagnon"
-        app:srcCompat="@drawable/upload_pet_pic"/>
+        app:srcCompat="@drawable/upload_pet_pic" />
 
     <TextView
         android:id="@+id/tvLastOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/poppins"
+        android:layout_marginTop="30dp"
         android:text="Dernière sortie : 18 h 50"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,56 +90,24 @@
         android:id="@+id/tvTimeOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
+        android:layout_marginTop="30dp"
         android:text="Bryson est sorti 2 h 14 aujourd’hui"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
-        android:id="@+id/tvStatus"
+        android:id="@+id/textView9"
         android:layout_width="162dp"
         android:layout_height="46dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="40dp"
         android:drawableStart="@drawable/ic_in"
         android:drawablePadding="5dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
-        android:text="@string/Inside"
+        android:text="Statut"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPetCompagnon" />
-
-    <ImageView
-        android:id="@+id/btNextPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="107dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/ic_nextpage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/ivPetCompagnon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
-    <ImageButton
-        android:id="@+id/ibAddPet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:background="#00FFFFFF"
-        android:onClick="replaceFragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_addpet"
-        android:contentDescription="AddPet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -41,7 +40,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.110000014" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -52,7 +50,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/inputEmail"
         android:layout_width="match_parent"
@@ -65,14 +62,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/drawable_email"
+            android:drawableLeft="@drawable/alternate_email"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
@@ -81,7 +77,6 @@
             android:padding="10dp"
             android:textAlignment="gravity"
             android:textColorHint="@color/black" />
-
         <View
             android:id="@+id/dividerEmail"
             android:layout_width="match_parent"
@@ -104,7 +99,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail">
-
         <Button
             android:id="@+id/btLogin"
             android:layout_width="match_parent"

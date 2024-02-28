@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sesamefrontend.R;
+import com.example.sesamefrontend.classes.Pet;
 
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class AdapterListHomePage extends RecyclerView.Adapter{
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.home_pet_layout,parent,false);
+        View view = inflater.inflate(R.layout.card_pet_home_page,parent,false);
         return new MonViewHolder(view);
     }
 

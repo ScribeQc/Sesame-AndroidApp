@@ -5,17 +5,7 @@
     android:background="?android:attr/windowBackground"
     android:backgroundTint="#D5D6D6">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="855dp"
-        android:layout_above="@+id/linearLayout"
-        android:layout_marginBottom="-1dp">
-
-    </FrameLayout>
-
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -29,7 +19,6 @@
             android:layout_weight="1"
             android:background="@drawable/btn_border"
             android:contentDescription="@string/title_home"
-            android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:src="@drawable/home" />
@@ -42,7 +31,6 @@
             android:layout_weight="1"
             android:background="@drawable/btn_border"
             android:contentDescription="@string/title_list"
-            android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:src="@drawable/list" />
@@ -55,7 +43,6 @@
             android:layout_weight="1"
             android:background="@drawable/btn_border"
             android:contentDescription="@string/title_pets"
-            android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:src="@drawable/pets" />
@@ -68,12 +55,10 @@
             android:layout_weight="1"
             android:background="@drawable/btn_border"
             android:contentDescription="@string/title_settings"
-            android:onClick="replaceFragment"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:src="@drawable/settings" />
 
 
     </LinearLayout>
-
 </RelativeLayout>
