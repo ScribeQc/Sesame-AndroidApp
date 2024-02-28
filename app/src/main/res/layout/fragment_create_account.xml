@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -40,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.110000014" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -51,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
         app:layout_constraintVertical_bias="0.3" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/inputFirstName"
         android:layout_width="130dp"
@@ -65,12 +68,13 @@
         app:layout_constraintEnd_toStartOf="@+id/inputLastName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
         <EditText
             android:id="@+id/etFirstName"
             android:layout_width="130dp"
             android:layout_height="50dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/person_pin_circle"
+            android:drawableLeft="@drawable/drawable_person_pin_circle"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
@@ -82,6 +86,7 @@
             app:layout_constraintEnd_toStartOf="@+id/etLastName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
         <View
             android:id="@+id/dividerFirstName"
             android:layout_width="match_parent"
@@ -90,6 +95,7 @@
             android:background="@color/lightGray"
             android:translationY="38dp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/inputLastName"
         android:layout_width="130dp"
@@ -104,6 +110,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/inputFirstName"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
         <EditText
             android:id="@+id/etLastName"
             android:layout_width="130dp"
@@ -122,6 +129,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/etFirstName"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
         <View
             android:id="@+id/dividerLastName"
             android:layout_width="match_parent"
@@ -130,6 +138,7 @@
             android:background="@color/lightGray"
             android:translationY="38dp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/inputEmail"
         android:layout_width="match_parent"
@@ -142,13 +151,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputFirstName">
+
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/alternate_email"
+            android:drawableLeft="@drawable/drawable_email"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
@@ -157,6 +167,7 @@
             android:padding="10dp"
             android:textAlignment="gravity"
             android:textColorHint="@color/black" />
+
         <View
             android:id="@+id/dividerEmail"
             android:layout_width="match_parent"
@@ -165,6 +176,7 @@
             android:background="@color/orange"
             android:translationY="38dp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/inputPhone"
         android:layout_width="match_parent"
@@ -177,13 +189,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail">
+
         <EditText
             android:id="@+id/etPhone"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/ic_phone"
+            android:drawableLeft="@drawable/drawable_phone"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
@@ -192,6 +205,7 @@
             android:padding="10dp"
             android:textAlignment="gravity"
             android:textColorHint="@color/black" />
+
         <View
             android:id="@+id/dividerPhone"
             android:layout_width="match_parent"
@@ -200,6 +214,7 @@
             android:background="@color/lightGray"
             android:translationY="38dp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/inputMdp"
         android:layout_width="match_parent"
@@ -212,13 +227,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPhone">
+
         <EditText
             android:id="@+id/etMdp"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/lock"
+            android:drawableLeft="@drawable/drawable_lock"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
@@ -227,6 +243,7 @@
             android:padding="10dp"
             android:textAlignment="gravity"
             android:textColorHint="@color/black" />
+
         <View
             android:id="@+id/dividerMdp"
             android:layout_width="match_parent"
@@ -249,6 +266,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputMdp">
+
         <Button
             android:id="@+id/btLogin"
             android:layout_width="match_parent"

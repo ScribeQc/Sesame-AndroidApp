@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -21,19 +22,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019"
+        app:layout_constraintVertical_bias="0.047"
         app:srcCompat="@mipmap/wave_fg_layer" />
 
     <ImageButton
-        android:id="@+id/ibSchedule"
+        android:id="@+id/biSchedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/rounded_corner"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/custom_rounded_corner"
         android:contentDescription="Open schedule"
-        android:src="@drawable/ic_add_schedule"
+        android:onClick="replaceFragment"
+        android:src="@drawable/drawable_schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,19 +44,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:fontFamily="@font/poppins"
         android:text="MESSAGE DE LOCK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.617" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHomePage"
         android:layout_width="407dp"
         android:layout_height="99dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:backgroundTint="#00000000"
+        android:contentDescription="Lock/Unluck"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvHomePage"
+        app:srcCompat="@mipmap/ic_lock_open_foreground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

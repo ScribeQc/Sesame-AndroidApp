@@ -8,10 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sesamefrontend.R;
 
-
-public class AccueilFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
     View view;
 
@@ -19,8 +17,6 @@ public class AccueilFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_accueil, container, false);
-
-        return view;
-    }
+        view = inflater.inflate(R.layout.fragment_profil, container, false);
+        return view;    }
 }

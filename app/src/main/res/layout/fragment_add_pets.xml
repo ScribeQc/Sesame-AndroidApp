@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -47,13 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/custom_rounded_corner"
         android:contentDescription="Upload Pet Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitlePetsPlus"
-        app:srcCompat="@drawable/upload_pet_pic" />
+        app:srcCompat="@drawable/drawable_upload_pet_pic" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputNickname"
@@ -74,7 +75,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/nickname"
+            android:drawableLeft="@drawable/drawable_nickname"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
@@ -112,7 +113,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/badge"
+            android:drawableLeft="@drawable/drawable_badge"
             android:drawablePadding="5dp"
             android:ems="10"
             android:fontFamily="@font/poppins"

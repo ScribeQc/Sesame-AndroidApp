@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
 
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.frameLayout, new AccueilFragment())
+                .replace(R.id.frameLayout, new HomeFragment())
                 .commit();
 
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         {
             fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frameLayout,new AccueilFragment());
+            fragmentTransaction.replace(R.id.frameLayout,new HomeFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         {
             fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frameLayout,new ListFragment());
+            fragmentTransaction.replace(R.id.frameLayout,new PetActivityFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
 
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         {
             fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frameLayout,new ProfilFragment());
+            fragmentTransaction.replace(R.id.frameLayout,new ProfileFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
         }
