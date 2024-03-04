@@ -57,44 +57,6 @@
         app:srcCompat="@drawable/drawable_upload_pet_pic" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/inputNickname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
-        android:layout_marginTop="20dp"
-        app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputFirstName">
-
-        <EditText
-            android:id="@+id/etNickname"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/custom_input"
-            android:drawableLeft="@drawable/drawable_nickname"
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:fontFamily="@font/poppins"
-            android:hint="Surnom"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textAlignment="gravity"
-            android:textColorHint="@color/black" />
-
-        <View
-            android:id="@+id/dividerNickName"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginHorizontal="30dp"
-            android:background="@color/lightGray"
-            android:translationY="38dp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/inputFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -132,44 +94,113 @@
             android:translationY="38dp" />
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/inputNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputSpecies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputFirstName">
+
+        <EditText
+            android:id="@+id/etNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/custom_input"
+            android:drawableLeft="@drawable/drawable_nickname"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Surnom"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textAlignment="gravity"
+            android:textColorHint="@color/black" />
+
+        <View
+            android:id="@+id/dividerNickName"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="30dp"
+            android:background="@color/lightGray"
+            android:translationY="38dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/inputSpecies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btCreatePet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNickname">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="262dp"
+            android:layout_height="107dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Chien"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Chat"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:text="Autre"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/btCreatePet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/orange"
         android:fontFamily="@font/poppins"
-        android:text="Ajouter"
+        android:text="@string/AddBtn"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.301" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="262dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNickname">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/gray"
-            android:buttonTint="@color/black"
-            android:text="Chien" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/gray"
-            android:text="Chat" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -598,6 +598,7 @@
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@+id/tvLockPreview">
+
         <Button
 
             android:id="@+id/btLogin"
@@ -610,8 +611,10 @@
 
             android:fontFamily="@font/poppins"
 
-            android:text="Ajouter"
+            android:text="@string/AddBtn"
 
+            android:textAllCaps="false"
+            android:textColor="@color/gray"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

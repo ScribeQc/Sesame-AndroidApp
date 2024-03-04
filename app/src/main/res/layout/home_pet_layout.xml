@@ -7,9 +7,10 @@
     android:padding="10dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="2dp"
+        app:cardBackgroundColor="@color/white"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,21 +26,21 @@
 
             <ImageButton
                 android:id="@+id/ivPetPhoto"
-                android:contentDescription="PetImage"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/custom_rounded_corner"/>
+                android:background="@drawable/custom_rounded_corner"
+                android:contentDescription="PetImage" />
 
             <TextView
                 android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="TextView"
+                android:fontFamily="@font/poppins"
+                android:text="Status"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp" />
+                android:textSize="18sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

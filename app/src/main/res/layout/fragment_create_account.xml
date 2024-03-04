@@ -273,7 +273,9 @@
             android:layout_height="match_parent"
             android:backgroundTint="@color/orange"
             android:fontFamily="@font/poppins"
-            android:text="S'inscrire"
+            android:text="@string/InscriptionBtn"
+            android:textAllCaps="false"
+            android:textColor="@color/gray"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

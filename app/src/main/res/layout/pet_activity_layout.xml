@@ -52,7 +52,9 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/poppins"
                     android:text="12h34"
-                    android:textAlignment="viewEnd"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightGray"
                     android:textSize="16sp" />
 
                 <TextView
@@ -61,9 +63,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:text="Aujourd'hui"
-                    android:textAlignment="viewEnd"
-                    android:textSize="16sp"
-                    android:textStyle="italic" />
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <androidx.cardview.widget.CardView

@@ -8,120 +8,177 @@
     android:textAlignment="center"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bNotificationsSetting"
-        android:layout_width="378dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#EEEEEE"
-        android:drawableLeft="@drawable/drawable_notifications"
-        android:fontFamily="@font/poppins"
-        android:text="Notification"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
-        android:textIsSelectable="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bProfilSetting" />
-
-    <Button
-        android:id="@+id/bMyPetsSetting"
-        android:layout_width="378dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#EEEEEE"
-        android:drawableLeft="@drawable/drawable_bone"
-        android:fontFamily="@font/poppins"
-        android:text="Vos compagnons"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
-        android:textIsSelectable="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bNotificationsSetting" />
-
-    <Button
-        android:id="@+id/bLanguageSetting"
-        android:layout_width="378dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#EEEEEE"
-        android:drawableLeft="@drawable/drawable_language"
-        android:fontFamily="@font/poppins"
-        android:text="Langues"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
-        android:textIsSelectable="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bMyPetsSetting" />
-
-    <Button
-        android:id="@+id/bTimeZoneSetting"
-        android:layout_width="378dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#EEEEEE"
-        android:drawableLeft="@drawable/drawable_time_zone"
-        android:fontFamily="@font/poppins"
-        android:text="Fuseau horaire"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
-        android:textIsSelectable="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bLanguageSetting" />
-
-    <Button
-        android:id="@+id/bLogoutSetting"
-        android:layout_width="378dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="70dp"
-        android:backgroundTint="#EEEEEE"
-        android:drawableLeft="@drawable/drawable_logout"
-        android:fontFamily="@font/poppins"
-        android:text="Déconnexion"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
-        android:textIsSelectable="false"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bTimeZoneSetting" />
-
-    <Button
-        android:id="@+id/bProfilSetting"
-        android:layout_width="378dp"
-        android:layout_height="60dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btCardProfilSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#EEEEEE"
-        android:drawableLeft="@drawable/drawable_profil"
-        android:fontFamily="@font/poppins"
-        android:onClick="replaceFragment"
-        android:text="Mon profil"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
-        android:textColorHighlight="#000000"
-        android:textColorLink="#000000"
-        android:textIsSelectable="false"
-        android:textSize="18sp"
+        android:background="@drawable/custom_input"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:contentPaddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleSetting" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleSetting">
+
+        <Button
+            android:id="@+id/bProfilSetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:drawableLeft="@drawable/drawable_profil"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:onClick="replaceFragment"
+            android:text="Profil et préférences"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="false"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btCardPetsSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_input"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:contentPaddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCardProfilSetting">
+
+        <Button
+            android:id="@+id/bMyPetsSetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:drawableLeft="@drawable/drawable_bone"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Vos compagnons"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="false"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btCardLanguageSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_input"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:contentPaddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCardPetsSetting">
+
+        <Button
+            android:id="@+id/bLanguageSetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:drawableLeft="@drawable/drawable_language"
+            android:drawableRight="@drawable/drawable_chevron"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Français"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="false"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btCardTimeZoneSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_input"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:contentPaddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCardLanguageSetting">
+
+        <Button
+            android:id="@+id/bTimeZoneSetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:drawableLeft="@drawable/drawable_time_zone"
+            android:drawableRight="@drawable/drawable_chevron"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="UTC-5"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="false"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btCardLogoutSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/custom_input"
+        app:cardBackgroundColor="@color/orange"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:contentPaddingLeft="10dp"
+        app:contentPaddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCardTimeZoneSetting">
+
+        <Button
+            android:id="@+id/bLogoutSetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:drawableLeft="@drawable/drawable_logout"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Déconnexion"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/gray"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="false"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageView"

@@ -12,6 +12,12 @@
     <string name="SettingPage">Paramètres</string>
     <string name="SchedulePage">Créneau de verrouillage</string>
     <string name="AddSchedulePage">Créneau de verrouillage +</string>
+    <string name="InscriptionBtn">S\'inscrire</string>
+    <string name="ConnexionBtn">Connexion</string>
+    <string name="AddBtn">Ajouter</string>
+    <string name="SendBtn">Envoyer</string>
+    <string name="CancelBtn">Annuler</string>
+    <string name="GoogleBtn">Se connecter avec Google</string>
     <string name="ProfilePage">Mon profil</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

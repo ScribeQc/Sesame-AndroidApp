@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,7 @@ public class PetActivityFragment extends Fragment implements AdapterListActivity
         listPetActivity.add(new PetActivity(false, "8h44", "Il y a 2 jours", "ic_dog"));
         listPetActivity.add(new PetActivity(true, "9h33", "Il y a 3 jours", "ic_dog"));
         listPetActivity.add(new PetActivity(true, "9h33", "Il y a 3 jours", "ic_dog"));
-
+        Log.d("ListPetActivity", listPetActivity.toString());
 
         rvPetActivity = view.findViewById(R.id.rvPetActivity);
 

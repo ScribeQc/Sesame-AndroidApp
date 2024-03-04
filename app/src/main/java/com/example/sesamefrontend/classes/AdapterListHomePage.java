@@ -13,7 +13,7 @@ import com.example.sesamefrontend.R;
 
 import java.util.List;
 
-public class AdapterListHomePage extends RecyclerView.Adapter{
+public class AdapterListHomePage extends RecyclerView.Adapter<AdapterListHomePage.ViewHolder>{
 
 
 
@@ -30,27 +30,20 @@ public class AdapterListHomePage extends RecyclerView.Adapter{
         this.interfacePet = interfacePet;
     }
 
-
-
-
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.home_pet_layout,parent,false);
-        return new MonViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Pet p = list.get(position);
-        MonViewHolder monViewHolder = (MonViewHolder) holder;
-        monViewHolder.tvStatus.setText(p.getStatus() ? R.string.Inside : R.string.Outside);
-
-        //string Img Pet
-        //monViewHolder.ibPet.setImageResource(p.getImg().toString());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        ViewHolder vh = (ViewHolder) holder;
+        vh.tvStatus.setText(list.get(position).getStatus() ? "Entrée" : "Sortie");
+        vh.tvStatus.setCompoundDrawablesWithIntrinsicBounds(list.get(position).getStatus() ? R.drawable.drawable_input_circle : R.drawable.drawable_output_circle, 0, 0, 0);
     }
-
 
     @Override
     public int getItemCount() {
@@ -68,12 +61,12 @@ public class AdapterListHomePage extends RecyclerView.Adapter{
         notifyItemRemoved(position);
     }
 
-    public class MonViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView tvStatus;
         ImageButton ibPet;
 
-        public MonViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvStatus = itemView.findViewById(R.id.tvStatus);
@@ -92,7 +85,6 @@ public class AdapterListHomePage extends RecyclerView.Adapter{
                 @Override
                 public void onClick(View view) {
                     interfacePet.gestionClick(getLayoutPosition(), list.get(getLayoutPosition()));
-
                 }
             });
         }

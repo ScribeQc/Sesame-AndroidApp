@@ -43,12 +43,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputEmailProfil"
-        android:layout_width="378dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="50dp"
         app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,28 +56,30 @@
 
         <EditText
             android:id="@+id/etEmailProfil"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/drawable_email"
             android:drawableEnd="@drawable/drawable_close"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
-            android:hint="Courriel"
             android:inputType="text"
             android:paddingEnd="10dp"
+            android:text="Courriel"
             android:textAlignment="gravity"
             android:textColorHint="@color/lightGray" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputFirstNameProfil"
-        android:layout_width="378dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,28 +87,30 @@
 
         <EditText
             android:id="@+id/etFirstNameProfil"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/drawable_person_pin_circle"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
-            android:hint="Prénom"
             android:inputType="text"
             android:paddingEnd="10dp"
+            android:text="Prénom"
             android:textAlignment="gravity"
-            android:textColorHint="@color/lightGray" />
+            android:textColorHint="@color/lightGray"
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputNameProfil"
-        android:layout_width="378dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,28 +118,29 @@
 
         <EditText
             android:id="@+id/etNameProfil"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/drawable_person_pin_circle"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
-            android:hint="Nom"
             android:inputType="text"
             android:paddingEnd="10dp"
+            android:text="Nom"
             android:textAlignment="gravity"
             android:textColorHint="@color/lightGray" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/inputPhoneProfil"
-        android:layout_width="378dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="65dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="@color/gray"
-        app:cardCornerRadius="300dp"
+        app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
@@ -144,16 +149,17 @@
 
         <EditText
             android:id="@+id/etPhoneProfil"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:background="@drawable/custom_input"
-            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/drawable_phone"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:fontFamily="@font/poppins"
-            android:hint="Numéro de téléphone"
             android:inputType="text"
             android:paddingEnd="10dp"
+            android:text="Numéro de téléphone"
             android:textAlignment="gravity"
             android:textColorHint="@color/lightGray" />
     </androidx.cardview.widget.CardView>
