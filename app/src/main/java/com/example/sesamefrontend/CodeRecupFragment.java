@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 
-public class EmailRecupFragment extends Fragment {
+public class CodeRecupFragment extends Fragment {
 
     EditText etEmail;
     View dividerEmail;
-    public EmailRecupFragment() {
+    public CodeRecupFragment() {
         // Required empty public constructor
     }
 
@@ -27,7 +27,7 @@ public class EmailRecupFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_email_recup, container, false);
+        View view = inflater.inflate(R.layout.fragment_code_recup, container, false);
 
         etEmail = view.findViewById(R.id.etEmail);
         dividerEmail = view.findViewById(R.id.dividerEmail);

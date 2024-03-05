@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.sesamefrontend.classes.AdapterListHomePage;
@@ -23,8 +24,9 @@ public class HomeFragment extends Fragment implements AdapterListHomePage.Interf
 
     View view;
     RecyclerView rvHomePage;
+    ImageButton ibHomeLock;
+    boolean isLocked = true;
     public static List<Pet> listPet = new ArrayList<>();
-
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -42,6 +44,20 @@ public class HomeFragment extends Fragment implements AdapterListHomePage.Interf
         rvHomePage.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         AdapterListHomePage adapterList = new AdapterListHomePage(listPet, this);
         rvHomePage.setAdapter(adapterList);
+
+        ibHomeLock = view.findViewById(R.id.ibHomeLock);
+        ibHomeLock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isLocked) {
+                    ibHomeLock.setImageResource(R.mipmap.ic_lock_close);
+                } else {
+                    ibHomeLock.setImageResource(R.mipmap.ic_lock_open);
+                }
+                isLocked = !isLocked;
+            }
+        });
+
         return view;
     }
 

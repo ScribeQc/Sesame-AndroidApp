@@ -10,12 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class LoginFragment extends Fragment {
 
     View view;
     Button btLogin;
+    EditText etEmail;
+    EditText etMdp;
+    View dividerEmail;
+    View dividerMdp;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -35,6 +40,32 @@ public class LoginFragment extends Fragment {
 
 
         btLogin = view.findViewById(R.id.btLogin);
+        etEmail = view.findViewById(R.id.etEmail);
+        etMdp = view.findViewById(R.id.etMdp);
+        dividerEmail = view.findViewById(R.id.dividerEmail);
+        dividerMdp = view.findViewById(R.id.dividerMdp);
+
+        etEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){
+                    dividerEmail.setBackgroundColor(getResources().getColor(R.color.orange));
+                }else{
+                    dividerEmail.setBackgroundColor(getResources().getColor(R.color.lightGray));
+                }
+            }
+        });
+
+        etMdp.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){
+                    dividerMdp.setBackgroundColor(getResources().getColor(R.color.orange));
+                }else{
+                    dividerMdp.setBackgroundColor(getResources().getColor(R.color.lightGray));
+                }
+            }
+        });
 
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override

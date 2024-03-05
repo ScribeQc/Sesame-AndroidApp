@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -28,19 +29,12 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
     ImageButton biPets;
     ImageButton biSettings;
     ImageButton biSchedule;
-
     private LinearLayout linearLayout;
-
-
-
     List<Pet> list = new ArrayList<>();
     RecyclerView rvHomePage;
-
     //ActivityResultLauncher<Intent> laucher ;
-
     Context context;
     AdapterListHomePage adapterList;
-
     FragmentManager fragmentManager;
 
 
@@ -57,25 +51,19 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         //ligne pour rendre visible la navBar
         //linearLayout.setVisibility(View.VISIBLE);
 
-
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frameLayout, new HomeFragment())
                 .commit();
 
-
         context = this;
 
-
-
-    // gestion fragment
+        // gestion fragment
         biHome = findViewById(R.id.biHome);
         biList = findViewById(R.id.biList);
         biPets = findViewById(R.id.biPets);
         biSettings = findViewById(R.id.biSettings);
 
-
-
-    // gestion recycle view dog+statut home page
+        // gestion recycle view dog+statut home page
         /*rvHomePage = findViewById(R.id.rvHomePage);
         rvHomePage.setHasFixedSize(true);
         rvHomePage.setLayoutManager(new LinearLayoutManager(this,
@@ -84,8 +72,6 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
 
         list.add(new Pet("Princess", "Beubé", "Chien", "", "", true));
         list.add(new Pet("Bryson", "King", "Chien", "", "", false));
-
-        //rvHomePage.setAdapter(adapterList);
     }
 
     private void resetButtonColors() {
@@ -96,14 +82,13 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
     }
 
     public void replaceFragment(View v) {
-
         resetButtonColors();
 
         if (v.getId() == R.id.biHome)
         {
             fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frameLayout,new HomeFragment());
+            fragmentTransaction.replace(R.id.frameLayout,new CreateAccountFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
             biHome.setColorFilter(Color.parseColor("#FF5C00"));
