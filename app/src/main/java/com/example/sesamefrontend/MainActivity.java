@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -85,9 +86,18 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         list.add(new Pet("Bryson", "King", "Chien", "", "", false));
 
         //rvHomePage.setAdapter(adapterList);
-
     }
+
+    private void resetButtonColors() {
+        biHome.setColorFilter(Color.parseColor("#2B2B2B"));
+        biList.setColorFilter(Color.parseColor("#2B2B2B"));
+        biPets.setColorFilter(Color.parseColor("#2B2B2B"));
+        biSettings.setColorFilter(Color.parseColor("#2B2B2B"));
+    }
+
     public void replaceFragment(View v) {
+
+        resetButtonColors();
 
         if (v.getId() == R.id.biHome)
         {
@@ -96,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
             fragmentTransaction.replace(R.id.frameLayout,new HomeFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
-
+            biHome.setColorFilter(Color.parseColor("#FF5C00"));
         }
 
         if (v.getId() == R.id.biList)
@@ -106,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
             fragmentTransaction.replace(R.id.frameLayout,new PetActivityFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
-
+            biList.setColorFilter(Color.parseColor("#FF5C00"));
         }
 
         if (v.getId() == R.id.biSettings)
@@ -116,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
             fragmentTransaction.replace(R.id.frameLayout,new SettingFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
-
+            biSettings.setColorFilter(Color.parseColor("#FF5C00"));
         }
 
         if (v.getId() == R.id.biPets)
@@ -126,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
             fragmentTransaction.replace(R.id.frameLayout,new PetsFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
-
+            biPets.setColorFilter(Color.parseColor("#FF5C00"));
         }
 
         if (v.getId() == R.id.biSchedule)
