@@ -192,7 +192,10 @@
                     android:showText="false"
                     android:textOff=""
                     android:textOn=""
-                    android:translationX="-40dp" />
+                    android:translationX="-40dp"
+                    android:thumbTint="@drawable/switch_thumb_selector"
+                    android:trackTint="@drawable/switch_track_selector"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             </LinearLayout>
         </LinearLayout>
