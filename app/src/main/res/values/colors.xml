@@ -5,6 +5,7 @@
     <color name="orange">#FF5C00</color>
     <color name="lightGray">#696969</color>
     <color name="gray">#EFEFEF</color>
+    <color name="nav">#D6D6D6</color>
     <color name="red">#BD0000</color>
     <color name="transparent">#00000000</color>
 </resources>

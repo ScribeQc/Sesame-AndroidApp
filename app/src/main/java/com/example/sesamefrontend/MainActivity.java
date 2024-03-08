@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         {
             fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.frameLayout,new CreateAccountFragment());
+            fragmentTransaction.replace(R.id.frameLayout,new HomeFragment());
             fragmentTransaction.addToBackStack(null); // Permet de revenir en arrière avec le bouton de retour
             fragmentTransaction.commit();
             biHome.setColorFilter(Color.parseColor("#FF5C00"));

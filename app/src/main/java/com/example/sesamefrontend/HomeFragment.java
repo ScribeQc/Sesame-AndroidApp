@@ -2,6 +2,8 @@ package com.example.sesamefrontend;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +38,9 @@ public class HomeFragment extends Fragment implements AdapterListHomePage.Interf
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home, container, false);
+        if (listPet.size() > 0) {
+            listPet.clear();
+        }
         listPet.add(new Pet("Rex", "Rexou", "Chien", "ic_dog", "123456", true));
         listPet.add(new Pet("Mina", "Minou", "Chat", "ic_dog", "789456", false));
         Log.d("ListPet", listPet.toString());
@@ -59,6 +64,11 @@ public class HomeFragment extends Fragment implements AdapterListHomePage.Interf
         });
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
