@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
     private LinearLayout linearLayout;
     List<Pet> list = new ArrayList<>();
     RecyclerView rvHomePage;
-    //ActivityResultLauncher<Intent> laucher ;
     Context context;
     AdapterListHomePage adapterList;
     FragmentManager fragmentManager;
@@ -46,10 +45,6 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         setContentView(R.layout.activity_main);
 
         LinearLayout linearLayout = findViewById(R.id.linearLayout);
-        //linearLayout.setVisibility(View.GONE);
-
-        //ligne pour rendre visible la navBar
-        //linearLayout.setVisibility(View.VISIBLE);
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frameLayout, new HomeFragment())
@@ -62,13 +57,6 @@ public class MainActivity extends AppCompatActivity implements AdapterListHomePa
         biList = findViewById(R.id.biList);
         biPets = findViewById(R.id.biPets);
         biSettings = findViewById(R.id.biSettings);
-
-        // gestion recycle view dog+statut home page
-        /*rvHomePage = findViewById(R.id.rvHomePage);
-        rvHomePage.setHasFixedSize(true);
-        rvHomePage.setLayoutManager(new LinearLayoutManager(this,
-                LinearLayoutManager.HORIZONTAL, false));
-        adapterList = new AdapterList(list, this);*/
 
         list.add(new Pet("Princess", "Beubé", "Chien", "", "", true));
         list.add(new Pet("Bryson", "King", "Chien", "", "", false));

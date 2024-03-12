@@ -61,7 +61,7 @@
         app:cardBackgroundColor="@color/gray"
         app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/btCard"
+        app:layout_constraintBottom_toTopOf="@+id/btCardSendCode"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -92,28 +92,36 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btCard"
-        android:layout_width="match_parent"
+        android:id="@+id/btCardSendCode"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="120dp"
+        android:layout_marginHorizontal="10dp"
         android:background="@drawable/custom_input"
         app:cardBackgroundColor="@color/orange"
         app:cardCornerRadius="15dp"
         app:cardElevation="15dp"
+        app:contentPaddingLeft="10dp"
+        app:contentPaddingRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail">
 
         <Button
-            android:id="@+id/btLogin"
+            android:id="@+id/btSendCode"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/orange"
+            android:background="@color/orange"
+            android:drawablePadding="10dp"
             android:fontFamily="@font/poppins"
-            android:text="@string/SendBtn"
+            android:text="Envoyer"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/gray"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            android:textIsSelectable="false"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

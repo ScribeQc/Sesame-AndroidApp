@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class HomeFragment extends Fragment implements AdapterListHomePage.Interf
 
     View view;
     RecyclerView rvHomePage;
-    ImageButton ibHomeLock;
+    ImageView ibHomeLock;
     TextView tvMsg;
     boolean isLocked = true;
     public static List<Pet> listPet = new ArrayList<>();
@@ -59,11 +60,11 @@ public class HomeFragment extends Fragment implements AdapterListHomePage.Interf
             @Override
             public void onClick(View v) {
                 if (isLocked) {
-                    ibHomeLock.setImageResource(R.drawable.drawable_home_lock_close);
+                    ibHomeLock.setImageResource(R.drawable.close);
                     tvMsg.setText("La porte est verrouillée");
 
                 } else {
-                    ibHomeLock.setImageResource(R.drawable.drawable_home_lock_open);
+                    ibHomeLock.setImageResource(R.drawable.open);
                     tvMsg.setText("La porte est déverrouillée");
                 }
                 isLocked = !isLocked;
